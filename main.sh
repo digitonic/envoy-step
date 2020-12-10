@@ -1,16 +1,12 @@
 #!/bin/bash
 
 echo "[Envoy] Started"
-echo "[Envoy] add env"
-env
 
 mkdir -p ~/.ssh
 
 export PRIVATEKEY_PATH=`mktemp`
 
 echo $PRIVATE_KEY | base64 -d > $PRIVATEKEY_PATH
-
-cat $PRIVATEKEY_PATH
 
 eval `ssh-agent -s`
 
