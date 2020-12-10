@@ -7,8 +7,8 @@ steps:
   main_clone:
     title: "Cloning repository"
     type: "git-clone"
-    repo: "digitonic/dockerfiles"
-    revision: "master"
+    repo: "digitonic/envoy-step"
+    revision: "main"
     stage: "clone"
 
   build:
