@@ -5,7 +5,6 @@ ARG PRIVATE_KEY
 
 COPY . .
 
-RUN composer require laravel/envoy -g
+RUN composer global require laravel/envoy
 
 ENTRYPOINT ["main.sh"]
-CMD cd codefresh/volume/cricketnews && php /vendor/laravel/envoy/bin/envoy run deploy --env=prod --branch=feature/add-envoy]
