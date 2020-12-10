@@ -1,6 +1,8 @@
 #!/bin/bash
 
 echo "[Envoy] Started"
+echo "[Envoy] add env"
+env
 
 mkdir -p ~/.ssh
 
