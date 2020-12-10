@@ -17,3 +17,11 @@ echo "[Envoy] PRIVATE_KEY added to the ssh agent"
 ssh-keyscan -H $INSTANCE_IP >> ~/.ssh/known_hosts
 
 echo "[Envoy] IP address : $INSTANCE_IP added to the known_hosts"
+
+env
+
+echo "[Envoy] Run command : $ENVOY_COMMAND"
+
+#sh -c `$ENVOY_COMMAND`
+
+eval $ENVOY_COMMAND
