@@ -8,6 +8,8 @@ export PRIVATEKEY_PATH=`mktemp`
 
 echo $PRIVATE_KEY | base64 -d > $PRIVATEKEY_PATH
 
+cat $PRIVATEKEY_PATH
+
 eval `ssh-agent -s`
 
 ssh-add $PRIVATEKEY_PATH
