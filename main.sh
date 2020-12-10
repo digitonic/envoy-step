@@ -22,6 +22,6 @@ env
 
 echo "[Envoy] Run command : $ENVOY_COMMAND"
 
-bash $ENVOY_COMMAND
+eval $ENVOY_COMMAND
 
 echo "[Envoy] Completed!"
