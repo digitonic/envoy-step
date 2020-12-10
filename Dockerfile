@@ -5,8 +5,8 @@ ARG PRIVATE_KEY
 
 RUN composer require laravel/envoy
 
-COPY . /app
+COPY /app/vendor/laravel/envoy/bin/envoy /usr/local/bin/envoy
 
-RUN ln -s /app/vendor/laravel/envoy/bin/envoy /usr/local/bin/envoy
+COPY . /app
 
 ENTRYPOINT ["/app/main.sh"]
