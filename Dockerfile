@@ -3,10 +3,10 @@ FROM digitonic1/php7.4:stable
 ARG INSTANCE_IP
 ARG PRIVATE_KEY
 
-COPY . .
+COPY . /app
 
-RUN composer global require laravel/envoy
+RUN composer require laravel/envoy
 
-RUN ln -s envoy /usr/local/bin/envoy
+RUN ln -s /app/vendor/laravel/envoy/bin/envoy /usr/local/bin/envoy
 
-ENTRYPOINT ["main.sh"]
+ENTRYPOINT ["/app/main.sh"]
