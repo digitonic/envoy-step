@@ -1,0 +1,20 @@
+version: "1.0"
+stages:
+  - "clone"
+  - "build"
+
+steps:
+  main_clone:
+    title: "Cloning repository"
+    type: "git-clone"
+    repo: "digitonic/dockerfiles"
+    revision: "master"
+    stage: "clone"
+
+  build:
+    title: "Building Step"
+    type: "build"
+    image_name: digitonic1/envoy-step
+    tag: "latest"
+    stage: "build"
+    registry: 'dockerhub'
