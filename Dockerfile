@@ -1,4 +1,4 @@
-FROM digitonic1/php7.4-php:stable
+FROM digitonic1/php7.4:stable
 
 ARG INSTANCE_IP
 ARG PRIVATE_KEY
