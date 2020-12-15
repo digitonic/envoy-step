@@ -20,6 +20,14 @@ echo "[Envoy] IP address : $INSTANCE_IP added to the known_hosts"
 
 echo "[Envoy] Run command : $ENVOY_COMMAND"
 
-eval $ENVOY_COMMAND
+run_cmd() {
+        if eval "$@"; then
+                exit 0
+        else
+                exit 1
+        fi
+}
+
+run_cmd $ENVOY_COMMAND
 
 echo "[Envoy] Completed!"
