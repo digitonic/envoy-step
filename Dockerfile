@@ -6,7 +6,7 @@ WORKDIR /app
 
 RUN composer require laravel/envoy
 
-RUN composer require deployer/deployer:^7.0
+RUN composer require deployer/deployer
 
 RUN ln -s /app/vendor/laravel/envoy/bin/envoy /usr/local/bin/envoy
 
