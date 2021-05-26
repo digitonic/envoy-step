@@ -1,4 +1,4 @@
-FROM digitonic1/php7.4:stable
+FROM digitonic1/php8:latest
 
 COPY . /app
 
