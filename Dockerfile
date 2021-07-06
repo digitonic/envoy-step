@@ -14,6 +14,8 @@ RUN composer require deployer/deployer
 
 RUN mv /app/vendor/bin/dep /usr/local/bin/dep
 
+RUN chmod +x /usr/local/bin/dep
+
 RUN chmod +x /app/main.sh
 
 ENTRYPOINT ["/app/main.sh"]
