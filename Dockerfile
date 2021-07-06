@@ -8,16 +8,6 @@ RUN composer require laravel/envoy
 
 RUN mv /app/vendor/laravel/envoy/bin/envoy /usr/local/bin/envoy
 
-RUN ls /app/vendor/bin
-
-RUN rm -rf composer.* && rm -rf vendor
-
-RUN composer require deployer/deployer
-
-RUN mv /app/vendor/bin/dep /usr/local/bin/dep
-
-RUN chmod +x /usr/local/bin/dep
-
 RUN chmod +x /app/main.sh
 
 ENTRYPOINT ["/app/main.sh"]
