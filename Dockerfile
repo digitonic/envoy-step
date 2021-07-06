@@ -6,7 +6,7 @@ WORKDIR /app
 
 RUN composer require laravel/envoy
 
-RUN mv /app/vendor/laravel/envoy/bin/envoy /usr/local/bin/envoy
+RUN ln -s /app/vendor/laravel/envoy/bin/envoy /usr/local/bin/envoy
 
 RUN chmod +x /app/main.sh
 
