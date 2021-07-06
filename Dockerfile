@@ -7,11 +7,12 @@ WORKDIR /app
 RUN composer require laravel/envoy
 
 RUN mv /app/vendor/laravel/envoy/bin/envoy /usr/local/bin/envoy
+RUN ls /app/vendor
 
 RUN rm -rf composer.* && rm -rf vendor
 
 RUN composer require deployer/deployer
-RUN ls /app/vendor/laravel
+RUN ls /app/vendor
 RUN ls /app/vendor/laravel/deployer/bin
 RUN mv /app/vendor/laravel/deployer/bin/dep /usr/local/bin/dep
 
