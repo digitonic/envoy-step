@@ -11,9 +11,8 @@ RUN mv /app/vendor/laravel/envoy/bin/envoy /usr/local/bin/envoy
 RUN rm -rf composer.* && rm -rf vendor
 
 RUN composer require deployer/deployer
-RUN ls /app/vendor/bin
-RUN ls /app/vendor/deployer/bin
-RUN mv /app/vendor/deployer/bin/dep /usr/local/bin/dep
+RUN ls /app/vendor/bin/dep
+RUN mv /app/vendor/bin/dep /usr/local/bin/dep
 
 RUN chmod +x /app/main.sh
 
