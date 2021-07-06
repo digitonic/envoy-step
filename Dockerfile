@@ -8,7 +8,7 @@ RUN composer require laravel/envoy
 
 RUN ln -s /app/vendor/laravel/envoy/bin/envoy /usr/local/bin/envoy
 
-RUN rm -rf ~/.composer/
+RUN rm -rf composer.* && rm -rf vendor
 
 RUN composer require deployer/deployer
 
