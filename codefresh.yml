@@ -14,7 +14,7 @@ steps:
   build:
     title: "Building Step"
     type: "build"
-    image_name: digitonic1/envoy-step
+    image_name: digitonic/envoy-step
     tag: "latest"
     stage: "build"
     registry: 'dockerhub'
